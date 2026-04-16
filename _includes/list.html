@@ -1,8 +1,4 @@
 <ul class="listContainer">
-    <li class="adContainer">
-        <span class="srt">Advertisement</span>
-        <div id="kbg-carbon"></div>
-    </li>
     {% assign sorted_graveyard = site.data.graveyard | sort: "dateClose" | reverse %}
     {% for item in sorted_graveyard %}
         {% include item.html item=item %}
