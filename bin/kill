@@ -1,129 +1,74 @@
-#!/usr/bin/env node
-const { prompt, Select, Confirm } = require('enquirer');
-const path = require('path');
-const fs = require('fs');
-const moment = require('moment');
-const slugify = require('slugify');
+#!/usr/bin/env ruby
+require "json"
+require "date"
 
-// Setup Slugify
-slugify.extend({
-    "+": "plus",
-    "@": "at",
-});
+def slugify(str)
+  str.downcase.gsub("+", "plus").gsub("@", "at").gsub(/[^a-z0-9]/, "-").gsub(/-+/, "-").delete_prefix("-").delete_suffix("-")
+end
 
+graveyard_path = File.expand_path("../_data/graveyard.json", __dir__)
+graveyard = JSON.parse(File.read(graveyard_path))
 
-// Graveyard Data
-const graveyardFilePath = path.resolve(__dirname, '..', 'graveyard.json');
-const graveyardData = require(graveyardFilePath);
+puts "Product name?"
+name = gets.chomp
+if graveyard.any? { |e| slugify(e["name"]) == slugify(name) }
+  puts "A entry with the name "#{name}" already exists."
+  exit
+end
 
-const isValidDate = async (value, dateOpen = false) => {
-    const dateArr = value.split("-");
+puts "Date opened? (yyyy-mm-dd)"
+date_open = gets.chomp
+begin
+  Date.parse(date_open)
+rescue
+  puts "Invalid date format."
+  exit
+end
 
-    if (dateArr.length !== 3)
-        return 'Date format is incorrect. (yyyy-mm-dd)';
-    if (dateArr[0].length !== 4 || !Number(dateArr[0]))
-        return 'Year format is incorrect. yyyy';
-    if (dateArr[1].length !== 2 || !Number(dateArr[1]))
-        return 'Month format is incorrect. mm';
-    if (dateArr[2].length !== 2 || !Number(dateArr[2]))
-        return 'Day format is incorrect. dd';
+puts "Date closed? (yyyy-mm-dd)"
+date_close = gets.chomp
+begin
+  close_date = Date.parse(date_close)
+  open_date = Date.parse(date_open)
+  if close_date < open_date
+    puts "Date closed must be after opening date."
+    exit
+  end
+rescue
+  puts "Invalid date format."
+  exit
+end
 
-    const date = moment(value);
-    if (!date.isValid())
-        return 'Invalid date. (yyyy-mm-dd)';
+puts "Link"
+link = gets.chomp
 
-    if(dateOpen && date.isBefore(moment(dateOpen)))
-        return `Date closed must be after opening date (${dateOpen}).`;
+puts "Description (single sentence, start with product name, past tense)"
+description = gets.chomp
 
-    return true;
-};
+puts "Which category? (app, service, hardware)"
+type = gets.chomp
+unless ["app", "service", "hardware"].include?(type)
+  puts "Invalid category."
+  exit
+end
 
-(async () => {
+product = {
+  "name" => name,
+  "dateOpen" => date_open,
+  "dateClose" => date_close,
+  "link" => link,
+  "description" => description,
+  "type" => type
+}
 
-    let dateOpenTmp = '';
-
-    const prompts = [
-        {
-            type: 'input',
-            name: 'name',
-            message: 'Product name?',
-            validate: (value) => {
-                const findMatch = graveyardData.find((entry) => {
-                    return (slugify(entry.name, { lower: true }) === slugify(value, { lower: true }))
-                });
-
-                if(findMatch)
-                    return `A entry with the name \`${value}\` already exists. (Product names must be unique.)\n\n...\n${JSON.stringify(findMatch, null, 2)}\n...`;
-                return true;
-            },
-        },
-        {
-            type: 'input',
-            name: 'dateOpen',
-            message: 'Date opened? (yyyy-mm-dd)',
-            validate: (value) => {
-                dateOpenTmp = value;
-                return isValidDate(value);
-            },
-        },
-        {
-            type: 'input',
-            name: 'dateClose',
-            message: 'Date closed? (yyyy-mm-dd)',
-            validate: (value) => {
-                return isValidDate(value, dateOpenTmp);
-            },
-        },
-        {
-            type: 'input',
-            name: 'link',
-            message: 'Link',
-            validate: (link) => {
-                try {
-                    const url = new URL(link);
-                } catch (err) {
-                    return 'URL is invalid.';
-                }
-                return true;
-            },
-        },
-        {
-            type: 'input',
-            name: 'description',
-            message: 'Description (single sentence, start with product name, past tense)',
-        },
-    ];
-
-    const typePrompt = new Select({
-        name: 'type',
-        message: 'Which category?',
-        choices: ['app', 'service', 'hardware'],
-    });
-
-    const product = {
-        ...(await prompt(prompts)),
-        type: (await typePrompt.run()),
-    };
-
-    console.log(product);
-
-    const confirm = new Confirm({
-        name: 'question',
-        message: 'Update `graveyard.json` with this product?',
-        initial: true,
-    });
-
-    const isConfirmed = await confirm.run();
-
-    if (!isConfirmed) {
-        console.log(`Nothing was changed!`);
-        return;
-    }
-
-    graveyardData.push(product);
-
-    fs.writeFileSync(graveyardFilePath, `${JSON.stringify(graveyardData, null, 2)}\n`);
-
-    console.log(`Product successfully added to \`graveyard.json\`!`);
-    
-})();
+puts JSON.pretty_generate(product)
+puts "Update _data/graveyard.json with this product? (y/n)"
+confirm = gets.chomp
+if confirm.downcase == "y"
+  graveyard << product
+  File.write(graveyard_path, JSON.pretty_generate(graveyard) + "
+")
+  puts "Product successfully added to _data/graveyard.json!"
+else
+  puts "Nothing was changed!"
+end

@@ -1,0 +1,13 @@
+title: Killed by Twitter
+description: Killed by Twitter is the open source list of dead Twitter products, services, and devices. It serves as a tribute and memorial of beloved services and products killed by Twitter.
+url: "https://killedbytwitter.com"
+twitter:
+  username: killedbytwitter
+  card: summary_large_image
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+exclude:
+  - node_modules/
+  - vendor/
+  - Gemfile.lock
