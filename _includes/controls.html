@@ -1,0 +1,17 @@
+<div class="controls">
+    <div class="searchContainer">
+        <label for="searchBox" aria-label="Search">
+            <span class="srt">Search</span>
+            <input id="searchBox" class="searchBox" placeholder="Search" type="text">
+        </label>
+    </div>
+    <label id="listFilter" class="filterLabel">
+        <span class="srt">Filter Graveyard List</span>
+        <select class="filterSelect" id="filter-select">
+            <option value="all">All ({{ site.data.graveyard | size }})</option>
+            <option value="app">Apps ({{ site.data.graveyard | where: "type", "app" | size }})</option>
+            <option value="service">Services ({{ site.data.graveyard | where: "type", "service" | size }})</option>
+            <option value="hardware">Hardware ({{ site.data.graveyard | where: "type", "hardware" | size }})</option>
+        </select>
+    </label>
+</div>
