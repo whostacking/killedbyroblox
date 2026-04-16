@@ -30,5 +30,85 @@
     "link": "https://archive.froast.io/forum/228429979",
     "description": "The Roblox Forums were used for discussing and socializing with other people in a text-based format. The forums housed different subforums that each had their purposes.",
     "type": "service"
+  },
+  {
+    "name": "Builders Club",
+    "dateOpen": "2007-08-16",
+    "dateClose": "2019-09-23",
+    "link": "https://roblox.fandom.com/wiki/Builders_Club",
+    "description": "Builders Club (BC) was Roblox's original paid membership, split into three tiers (BC, Turbo BC, and Outrageous BC), granting users a daily Robux bonus, extra place slots, the ability to sell clothing, and other exclusive perks.",
+    "type": "feature"
+  },
+  {
+    "name": "Roblox Premium",
+    "dateOpen": "2019-09-23",
+    "dateClose": "2026-05-30",
+    "link": "https://roblox.fandom.com/wiki/Roblox_Premium",
+    "description": "Roblox Premium was the paid membership successor to Builders Club, offering a monthly Robux stipend, item trading, and a 10% Robux purchase bonus. It was announced as discontinued on April 10, 2026, to be replaced by Roblox Plus.",
+    "type": "feature"
+  },
+  {
+    "name": "Build Mode",
+    "dateOpen": "2006-09-01",
+    "dateClose": "2016-12-01",
+    "link": "https://roblox.fandom.com/wiki/Build_Mode",
+    "description": "Build Mode was an in-game feature that allowed players to place and manipulate bricks directly inside a live game session. It was quietly removed in late December 2016 without a formal announcement.",
+    "type": "feature"
+  },
+  {
+    "name": "Safe Chat",
+    "dateOpen": "2007-01-01",
+    "dateClose": "2013-01-01",
+    "link": "https://roblox.fandom.com/wiki/Safe_Chat",
+    "description": "Safe Chat was a restricted chat mode used by under-13 users and guests that limited messages to a predefined whitelist of phrases. It was replaced by a new content filtering system in 2013.",
+    "type": "feature"
+  },
+  {
+    "name": "My Sets",
+    "dateOpen": "2010-01-01",
+    "dateClose": "2018-10-15",
+    "link": "https://roblox.fandom.com/wiki/My_Sets",
+    "description": "My Sets was a feature on the Roblox website and in Roblox Studio that let players organize and save collections of models and assets. It was removed on October 15, 2018.",
+    "type": "feature"
+  },
+  {
+    "name": "User Advertisements",
+    "dateOpen": "2008-01-01",
+    "dateClose": "2024-06-17",
+    "link": "https://roblox.fandom.com/wiki/User_Advertisements",
+    "description": "User Advertisements allowed players to purchase ad space on the Roblox website to promote their games, groups, and clothing items. They were removed on June 17, 2024.",
+    "type": "feature"
+  },
+  {
+    "name": "PointsService",
+    "dateOpen": "2014-09-01",
+    "dateClose": "2023-06-30",
+    "link": "https://roblox.fandom.com/wiki/PointsService",
+    "description": "PointsService was a Roblox API service that allowed game developers to award players points for completing in-game tasks, which were displayed on per-game leaderboards. It was deprecated and removed on June 30, 2023.",
+    "type": "feature"
+  },
+  {
+    "name": "Personal Servers",
+    "dateOpen": "2008-01-01",
+    "dateClose": "2016-12-01",
+    "link": "https://roblox.fandom.com/wiki/Personal_Server",
+    "description": "Personal Servers were private game instances available exclusively to Builders Club members, allowing them to play in a server only accessible to people they invited.",
+    "type": "feature"
+  },
+  {
+    "name": "Facebook Connect",
+    "dateOpen": "2010-01-01",
+    "dateClose": "2015-01-01",
+    "link": "https://roblox.fandom.com/wiki/Facebook_Connect",
+    "description": "Facebook Connect was a feature that allowed Roblox users to link their Roblox account to their Facebook profile, enabling social sharing and friend discovery via Facebook.",
+    "type": "service"
+  },
+  {
+    "name": "Engagement-Based Payouts",
+    "dateOpen": "2017-01-01",
+    "dateClose": "2024-07-01",
+    "link": "https://devforum.roblox.com/t/sunsetting-engagement-based-payouts/3050428",
+    "description": "Engagement-Based Payouts (EBP) was a system that automatically rewarded game developers with Robux based on the time Premium subscribers spent in their games. It was sunset in 2024 in favor of other monetization tools.",
+    "type": "feature"
   }
 ]
