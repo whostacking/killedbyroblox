@@ -1,8 +1,8 @@
-title: Killed by Google
-description: Killed by Google is the open source list of dead Google products, services, and devices. It serves as a tribute and memorial of beloved services and products killed by Google.
-url: "https://killedbygoogle.com"
+title: Killed by Twitter
+description: Killed by Twitter is the open source list of dead Twitter products, services, and devices. It serves as a tribute and memorial of beloved services and products killed by Twitter.
+url: "https://killedbytwitter.com"
 twitter:
-  username: killedbygoogle
+  username: killedbytwitter
   card: summary_large_image
 plugins:
   - jekyll-sitemap
