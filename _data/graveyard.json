@@ -4,7 +4,7 @@
     "dateOpen": "2007-08-02",
     "dateClose": "2016-04-14",
     "link": "https://blog.haydz6.com/2016/03/saying-goodbye-to-tickets/",
-    "description": "A Ticket, also known as Tix for short, was a former Roblox currency alongside Robux, introduced on August 2, 2007.",
+    "description": "a Ticket, also known as Tix for short, was a former Roblox currency alongside Robux, introduced on August 2, 2007.",
     "type": "feature"
   },
   {
@@ -44,7 +44,7 @@
     "dateOpen": "2008-12-17",
     "dateClose": "2026-03-24",
     "link": "https://roblox.fandom.com/wiki/Classic_head",
-    "description": "Classic heads were Marketplace assets that change the mesh of an avatar's head.",
+    "description": "classic heads were Marketplace assets that change the mesh of an avatar's head.",
     "type": "feature"
   },
   {
@@ -68,7 +68,7 @@
     "dateOpen": "2019-04-29",
     "dateClose": "2025-10-24",
     "link": "https://roblox.fandom.com/wiki/Star_Code",
-    "description": "The Star Code was a feature that was implemented on April 29, 2019. Its main purpose is to support and feature those in the Roblox Video Stars Program.",
+    "description": "Star Codes were a feature that was implemented on April 29, 2019. Its main purpose is to support and feature those in the Roblox Video Stars Program.",
     "type": "feature"
   },
   {
@@ -76,7 +76,7 @@
     "dateOpen": "2009-07-29",
     "dateClose": "2026-04-01",
     "link": "https://devforum.roblox.com/t/forums-are-now-live-for-all-community-owners/3892463",
-    "description": "Group walls were a feature that allowed group members to post messages and interact within their group's dedicated space.",
+    "description": "group walls were a feature that allowed group members to post messages and interact within their group's dedicated space.",
     "type": "feature"
   },
   {
@@ -197,6 +197,14 @@
     "dateClose": "2018-12-01",
     "link": "https://devforum.roblox.com/t/sunsetting-sets/189402",
     "description": "sets were groups of models or decals that were created by players on Roblox, allowing players to easily find needed models in one, easy-to-find location. ",
+    "type": "feature"
+  },
+  {
+    "name": "User advertisements",
+    "dateOpen": "2008-11-21",
+    "dateClose": "2024-06-17",
+    "link": "https://devforum.roblox.com/t/sunsetting-user-ads-and-improvements-to-sponsored-experiences/3004673",
+    "description": "user advertisements  were a community-driven feature that allowed players to create and run their own banners, skyscrapers, and squares to promote games, clothing, or groups.",
     "type": "feature"
   },
   {
