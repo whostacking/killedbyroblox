@@ -1,6 +1,6 @@
 <li class="listItem" data-type="{{ include.item.type }}" data-name="{{ include.item.name | downcase }}" data-description="{{ include.item.description | downcase }}">
     <div class="iconContainer">
-        <img class="icon" src="https://static.killedbygoogle.com/com/tombstone.svg" alt="Tombstone" data-date="{{ include.item.dateClose }}">
+        <img class="icon" src="/assets/tombstone.svg" alt="Tombstone" data-date="{{ include.item.dateClose }}">
         <div class="ageRange">
             {% assign open_year = include.item.dateOpen | date: "%Y" %}
             {% assign close_year = include.item.dateClose | date: "%Y" %}
