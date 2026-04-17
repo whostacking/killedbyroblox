@@ -136,14 +136,6 @@
     "type": "feature"
   },
   {
-    "name": "Guilded",
-    "dateOpen": "2017-03-17",
-    "dateClose": "2025-12-19",
-    "link": "https://devforum.roblox.com/t/update-on-guilded-and-communities/3966775",
-    "description": "Guilded was a VoIP, instant messaging and digital distribution platform developed by Guilded Inc. and owned by Roblox Corporation.",
-    "type": "service"
-  },
-  {
     "name": "Forums",
     "dateOpen": "2004-06-30",
     "dateClose": "2017-12-04",
@@ -158,6 +150,54 @@
     "link": "https://roblox.fandom.com/wiki/Luobu",
     "description": "Luobu was the mainland Chinese version of Roblox.",
     "type": "service"
+  },
+  {
+    "name": "Guilded",
+    "dateOpen": "2017-03-17",
+    "dateClose": "2025-12-19",
+    "link": "https://devforum.roblox.com/t/update-on-guilded-and-communities/3966775",
+    "description": "Guilded was a VoIP, instant messaging and digital distribution platform developed by Guilded Inc. and owned by Roblox Corporation.",
+    "type": "app"
+  },
+  {
+    "name": "Survive the Disasters",
+    "dateOpen": "2014-01-14",
+    "dateClose": "2014-08-04",
+    "link": "https://roblox.fandom.com/wiki/Survive_the_Disasters_(app)",
+    "description": "Survive the Disasters was an action video game published by Roblox Corporation. It simulated Stickmasterluke's Natural Disaster Survival experience.",
+    "type": "app"
+  },
+  {
+    "name": "Hang Out in a Disco and Chat",
+    "dateOpen": "2014-01-02",
+    "dateClose": "2014-03-05",
+    "link": "https://roblox.fandom.com/wiki/Hang_Out_in_a_Disco_and_Chat",
+    "description": "Hang Out in a Disco and Chat is a discontinued iOS app developed by Roblox Corporation.",
+    "type": "app"
+  },
+  {
+    "name": "Roblox Developer",
+    "dateOpen": "2014-09-24",
+    "dateClose": "2017-04-14",
+    "link": "https://devforum.roblox.com/t/what-happened-to-the-developer-app/35123/4",
+    "description": "The Roblox Developer App was a mobile app released on the iOS App Store. The app allowed the user to pair their device to Roblox Studio so that they could use it as a testing device when using Server-Client mode.",
+    "type": "app"
+  },
+  {
+    "name": "Roblox Developer Hub",
+    "dateOpen": "2018-06-28",
+    "dateClose": "2022-08-08",
+    "link": "https://devforum.roblox.com/t/a-milestone-for-the-future-of-creator-resources/2067352",
+    "description": "The Roblox Developer Hub was an official resource about Roblox development. It gathers tutorials and guides on game development and has an API reference with documentation on classes, enums, and the global namespace.",
+    "type": "website"
+  },
+  {
+    "name": "Roblox Developer Wiki",
+    "dateOpen": "2006-03-20",
+    "dateClose": "2018-06-28",
+    "link": "https://devforum.roblox.com/t/announcing-the-new-developer-hub/140756",
+    "description": "The Roblox Developer Wiki was the official resource about Roblox development. It gathered tutorials and guides on game development and had an API reference with documentation on classes and the global namespace.",
+    "type": "website"
   },
   {
     "name": "Toys",
