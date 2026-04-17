@@ -30,12 +30,23 @@ jobs:
           const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
           
           data.sort((a, b) => {
-            const typeCompare = a.type.localeCompare(b.type);
+            const typeA = a.type.toLowerCase();
+            const typeB = b.type.toLowerCase();
+            const misc = 'miscellaneous';
+
+            // handle 'miscellaneous' priority
+            if (typeA === misc && typeB !== misc) return 1;
+            if (typeA !== misc && typeB === misc) return -1;
+
+            // sort by type alphabetically
+            const typeCompare = typeA.localeCompare(typeB);
             if (typeCompare !== 0) return typeCompare;
+
+            // sort by name alphabetically within the same type
             return a.name.localeCompare(b.name);
           });
           
-          fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+          fs.writeFileSync(filePath, JSON.stringify(data, null, 2) + '\n');
           "
 
       - name: Create PR
@@ -50,7 +61,7 @@ jobs:
           base: ${{ github.ref_name }}
           delete-branch: true
           title: "organize graveyard.json"
-          body: "This PR was automatically generated to sort graveyard entries by type and name."
+          body: "This PR was automatically generated to sort graveyard entries."
 
       - name: Auto-merge PR
         if: steps.cpr.outputs.pull-request-operation == 'created'
