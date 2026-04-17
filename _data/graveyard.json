@@ -1,18 +1,18 @@
 [
   {
-    "name": "Tickets (TIX)",
+    "name": "Tix",
     "dateOpen": "2007-08-02",
     "dateClose": "2016-04-14",
-    "link": "https://roblox.fandom.com/wiki/Ticket",
-    "description": "Removed on April 14, 2016, Tickets were another currency, alongside Robux, that could be earned by players through visiting Roblox daily or other players joining your games. Like Robux, Tickets could be spent on Marketplace items and user advertisements.",
+    "link": "https://blog.haydz6.com/2016/03/saying-goodbye-to-tickets/",
+    "description": "A Ticket, also known as Tix for short, was a former Roblox currency alongside Robux, introduced on August 2, 2007.",
     "type": "feature"
   },
   {
     "name": "Guests",
     "dateOpen": "2008-09-26",
     "dateClose": "2017-10-02",
-    "link": "https://roblox.fandom.com/wiki/Guest",
-    "description": "Before being removed on October 2, 2017, people who wanted to play Roblox but didn't want to create an account could play as a \"Guest\" account. Guest accounts had limited access to features and could not chat or spend Robux.",
+    "link": "https://devforum.roblox.com/t/removal-of-guest-mode/54517",
+    "description": "Guests were a feature which allowed unregistered players to test the Roblox platform without a formal account.",
     "type": "feature"
   },
   {
@@ -21,14 +21,14 @@
     "dateClose": "2017-07-27",
     "link": "https://roblox.fandom.com/wiki/All_Things_Roblox",
     "description": "All Things Roblox was one of the four Roblox section subforums.",
-    "type": "feature"
+     "type": "feature"
   },
   {
-    "name": "Builders Club Avatar Items",
+    "name": "BC Exclusive items",
     "dateOpen": "2010-05-29",
     "dateClose": "2019-04-30",
     "link": "https://roblox.fandom.com/wiki/BC_Exclusive_items",
-    "description": "Removed in April 2019, specific items on the Avatar Marketplace could only be purchased by players who were part of the Builders Club membership. All users who originally obtained these items kept them after they went offsale.",
+    "description": "BC Exclusive items could only be bought by people with Builders Club membership.",
     "type": "feature"
   },
   {
@@ -40,11 +40,11 @@
     "type": "feature"
   },
   {
-    "name": "Classic Heads",
+    "name": "Classic heads",
     "dateOpen": "2008-12-17",
     "dateClose": "2026-03-24",
     "link": "https://roblox.fandom.com/wiki/Classic_head",
-    "description": "Removed on March 24, 2026, all Classic Heads and Faces were converted to Dynamic Heads with animated faces.",
+    "description": "Classic heads were Marketplace assets that change the mesh of an avatar's head.",
     "type": "feature"
   },
   {
@@ -52,39 +52,39 @@
     "dateOpen": "2009-01-15",
     "dateClose": "2026-03-24",
     "link": "https://roblox.fandom.com/wiki/Face",
-    "description": "Removed on March 24, 2026, all Classic Heads and Faces were converted to Dynamic Heads with animated faces.",
+    "description": "Faces were Marketplace assets that changed the image of an avatar's head.",
     "type": "feature"
   },
   {
     "name": "Comments",
     "dateOpen": "2007-08-30",
-    "dateClose": "2016-12-02",
-    "link": "https://roblox.fandom.com/wiki/Comment",
-    "description": "Prior to 2016, users could leave comments under various assets, including avatar items, passes, badges, and games. On May 16, 2016, comments were removed from avatar items, while on December 2, 2016, comments were removed from games.",
+    "dateClose": "2024-04-23",
+    "link": "https://devforum.roblox.com/t/deprecating-comments-for-marketplace-items/2890881",
+    "description": "Comments, formerly known as Commentary, was a section available through assets on the Roblox website.",
     "type": "feature"
   },
   {
-    "name": "Video Star Codes",
+    "name": "Star Codes",
     "dateOpen": "2019-04-29",
     "dateClose": "2025-10-24",
     "link": "https://roblox.fandom.com/wiki/Star_Code",
-    "description": "Removed on October 24, 2025, Video Star Codes could be entered by any user when purchasing Robux to give members of the Star Video Program 5% back in revenue.",
+    "description": "The Star Code was a feature that was implemented on April 29, 2019. Its main purpose is to support and feature those in the Roblox Video Stars Program.",
     "type": "feature"
   },
   {
-    "name": "Community Walls",
-    "dateOpen": "2009-07-30",
-    "dateClose": "2026-03-21",
-    "link": "https://roblox.fandom.com/wiki/Community",
-    "description": "Removed on March 21, 2026, Community Walls were a place for Community members to post comments in a feed-style chain. This feature was replaced by Community Forums.",
+    "name": "Group walls",
+    "dateOpen": "2009-07-29",
+    "dateClose": "2026-04-01",
+    "link": "https://devforum.roblox.com/t/forums-are-now-live-for-all-community-owners/3892463",
+    "description": "Group walls were a feature that allowed group members to post messages and interact within their group's dedicated space.",
     "type": "feature"
   },
   {
     "name": "Player Points",
     "dateOpen": "2014-04-15",
-    "dateClose": "2018-12-31",
-    "link": "https://roblox.fandom.com/wiki/Player_Points",
-    "description": "Discontinued in 2018, Player Points were earned by players in different games to showcase a players skill in that game and display on the Leaderboard, which was also later removed. Player Points still existed in the backend until November 2023.",
+    "dateClose": "2023-06-30",
+    "link": "https://devforum.roblox.com/t/retiring-pointsservice/2318767",
+    "description": "Player Points were a scoring system on Roblox, generally intended to display players' skill.",
     "type": "feature"
   },
   {
@@ -94,13 +94,13 @@
     "link": "https://roblox.fandom.com/wiki/Xbox_One_S_Roblox_Bundle",
     "description": "The Xbox One S Roblox Bundle was a Xbox One S bundle created by Microsoft for the Xbox One S. Purchasing the bundle granted exclusive Rthro avatar bundles, avatar accessories, and Robux.",
     "type": "service"
-  },
+   },
   {
     "name": "Builders Club",
-    "dateOpen": "2007-08-16",
+    "dateOpen": "2007-04-12",
     "dateClose": "2019-09-23",
-    "link": "https://roblox.fandom.com/wiki/Builders_Club",
-    "description": "Discontinued on September 23, 2019, Builders Club was the predecessor to the current Roblox Premium subscription. Depending on the tier, Builders Club members received a daily Robux stipend, additional Group slots, exclusive badges, and more.",
+    "link": "https://web.archive.org/web/20220724230516/https://blog.roblox.com/2019/09/introducing-roblox-premium/",
+    "description": "Builders Club (BC) was a Roblox membership split into 3 tiers that granted users extra privileges.",
     "type": "service"
   },
   { 
@@ -112,11 +112,11 @@
     "type": "service"
   },
   {
-    "name": "Group Clans",
+    "name": "Clans",
     "dateOpen": "2014-04-22",
     "dateClose": "2019-01-23",
-    "link": "https://roblox.fandom.com/wiki/Clan",
-    "description": "Removed on January 23, 2019, Clans were used by Groups to showcase Player Points earned on a game's Leaderboard. With the discontinuation of Player Points and Leaderboards respectively, this feature became obsolete.",
+    "link": "https://devforum.roblox.com/t/sunsetting-clans/230005",
+    "description": "Clans were groups of people that could compete for the top spot on a game's Leaderboard. They got to the top spot by earning Player points from that game.",
     "type": "service"
   },
   {
@@ -138,9 +138,9 @@
   {
     "name": "Forums",
     "dateOpen": "2004-06-30",
-    "dateClose": "2017-12-11",
-    "link": "https://roblox.fandom.com/wiki/Forums",
-    "description": "Removed on December 11, 2017, Forums were a place where players could talk and communicate with each other in a text-based format. Each category had sub-forums that could be used to discuss various topics relating to Roblox.",
+    "dateClose": "2017-12-04",
+    "link": "https://archive.froast.io/forum/228429979",
+    "description": "The Roblox Forums were used for discussing and socializing with other people in a text-based format. The forums housed different subforums that each had their purposes.",
     "type": "service"
   },
   {
