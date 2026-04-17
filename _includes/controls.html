@@ -9,7 +9,7 @@
         <span class="srt">Filter Graveyard List</span>
         <select class="filterSelect" id="filter-select">
             <option value="all">All ({{ site.data.graveyard | size }})</option>
-            <option value="app">Apps ({{ site.data.graveyard | where: "type", "app" | size }})</option>
+            <option value="feature">Features ({{ site.data.graveyard | where: "type", "feature" | size }})</option>
             <option value="service">Services ({{ site.data.graveyard | where: "type", "service" | size }})</option>
             <option value="hardware">Hardware ({{ site.data.graveyard | where: "type", "hardware" | size }})</option>
         </select>

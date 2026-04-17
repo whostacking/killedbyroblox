@@ -42,4 +42,4 @@ Please be respectful, only use past tense.
 Link should be a resource that mentions the discontinuation date and talks about the product. Links to Wikipedia or a news organization should be prioritized. **Please do not use Roblox Support articles, linking to the product's URL, the product's marketing URL, or other Roblox-provided links.** Roblox removes these links quickly after a service is ended.
 
 #### Type
-The type should be either `app`, `service`, or `hardware` as a string.
+The type should be either `feature`, `service`, or `hardware` as a string.
