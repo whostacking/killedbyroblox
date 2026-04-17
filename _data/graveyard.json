@@ -72,6 +72,22 @@
     "type": "feature"
   },
   {
+    "name": "Group walls",
+    "dateOpen": "2009-07-29",
+    "dateClose": "2026-04-01",
+    "link": "https://devforum.roblox.com/t/forums-are-now-live-for-all-community-owners/3892463",
+    "description": "Group walls were a feature that allowed group members to post messages and interact within their group's dedicated space.",
+    "type": "feature"
+  },
+  {
+    "name": "Player Points",
+    "dateOpen": "2014-04-15",
+    "dateClose": "2023-06-30",
+    "link": "https://devforum.roblox.com/t/retiring-pointsservice/2318767",
+    "description": "Player Points were a scoring system on Roblox, generally intended to display players' skill.",
+    "type": "feature"
+  },
+  {
     "name": "Xbox One S Roblox Bundle",
     "dateOpen": "2020-03-17",
     "dateClose": "2023-12-31",
