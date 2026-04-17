@@ -1,13 +1,18 @@
-name: Sort graveyard data
+name: Sort Graveyard Data
 on:
   push:
     paths:
       - '_data/graveyard.json'
   workflow_dispatch: 
 
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
   sort-json:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -25,21 +30,30 @@ jobs:
           const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
           
           data.sort((a, b) => {
-            // sort by type alphabetically
             const typeCompare = a.type.localeCompare(b.type);
             if (typeCompare !== 0) return typeCompare;
-            
-            // sort by name A-Z within that type
             return a.name.localeCompare(b.name);
           });
           
           fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
           "
 
-      - name: Commit & push
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add _data/graveyard.json
-          git commit -m "chore: auto-sort graveyard.json by type and name" || echo "No changes to commit"
-          git push
+      - name: Create PR
+        id: cpr
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "chore: auto-sort graveyard.json"
+          committer: GitHub <noreply@github.com>
+          author: github-actions[bot] <github-actions[bot]@users.noreply.github.com>
+          branch: chore/sort-graveyard/${{ github.ref_name }}
+          base: ${{ github.ref_name }}
+          delete-branch: true
+          title: "organize graveyard.json"
+          body: "This PR was automatically generated to sort graveyard entries by type and name."
+
+      - name: Auto-merge PR
+        if: steps.cpr.outputs.pull-request-operation == 'created'
+        run: gh pr merge "${{ steps.cpr.outputs.pull-request-number }}" --merge --admin
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
