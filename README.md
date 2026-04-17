@@ -19,7 +19,7 @@ To add a product, gather the following information:
 - Discontinued Date (`dateClose`)
 - Description (`description`)
 - Link (`link`) - Relevant link to the source.
-- Type (`type`) - one of App, Service or Hardware
+- Type (`type`) - one of App, Feature, or Service
 
 If you are not familiar with or do not want to use `git`, submit a [new issue](https://github.com/whostacking/killedbyroblox/issues/new?template=add-an-obituary.md) requesting the change. If you are already familiar with `git`, follow these steps:
 
@@ -42,4 +42,4 @@ Please be respectful, only use past tense.
 Link should be a resource that mentions the discontinuation date and talks about the product. Links to Wikipedia or a news organization should be prioritized. **Please do not use Roblox Support articles, linking to the product's URL, the product's marketing URL, or other Roblox-provided links.** Roblox removes these links quickly after a service is ended.
 
 #### Type
-The type should be either `feature`, `service`, or `hardware` as a string.
+The type should be either `feature`, `service`, or `app` as a string.

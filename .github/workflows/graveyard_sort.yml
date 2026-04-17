@@ -1,0 +1,70 @@
+name: Sort Graveyard Data
+on:
+  push:
+    paths:
+      - '_data/graveyard.json'
+  workflow_dispatch: 
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sort-json:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Sort data
+        run: |
+          node -e "
+          const fs = require('fs');
+          const filePath = '_data/graveyard.json';
+          const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+          
+          data.sort((a, b) => {
+            const typeA = a.type.toLowerCase();
+            const typeB = b.type.toLowerCase();
+            const misc = 'miscellaneous';
+
+            // handle 'miscellaneous' priority
+            if (typeA === misc && typeB !== misc) return 1;
+            if (typeA !== misc && typeB === misc) return -1;
+
+            // sort by type alphabetically
+            const typeCompare = typeA.localeCompare(typeB);
+            if (typeCompare !== 0) return typeCompare;
+
+            // sort by name alphabetically within the same type
+            return a.name.localeCompare(b.name);
+          });
+          
+          fs.writeFileSync(filePath, JSON.stringify(data, null, 2) + '\n');
+          "
+
+      - name: Create PR
+        id: cpr
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "chore: auto-sort graveyard.json"
+          committer: GitHub <noreply@github.com>
+          author: github-actions[bot] <github-actions[bot]@users.noreply.github.com>
+          branch: chore/sort-graveyard/${{ github.ref_name }}
+          base: ${{ github.ref_name }}
+          delete-branch: true
+          title: "organize graveyard.json"
+          body: "This PR was automatically generated to sort graveyard entries."
+
+      - name: Auto-merge PR
+        if: steps.cpr.outputs.pull-request-operation == 'created'
+        run: gh pr merge "${{ steps.cpr.outputs.pull-request-number }}" --merge --admin
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

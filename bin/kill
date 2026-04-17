@@ -45,9 +45,9 @@ link = gets.chomp
 puts "Description (single sentence, start with product name, past tense)"
 description = gets.chomp
 
-puts "Which category? (feature, service, hardware)"
+puts "Which category? (feature, service, app)"
 type = gets.chomp
-unless ["feature", "service", "hardware"].include?(type)
+unless ["feature", "service", "app"].include?(type)
   puts "Invalid category."
   exit
 end
