@@ -1,0 +1,45 @@
+name: Sort graveyard data
+on:
+  push:
+    paths:
+      - '_data/graveyard.json'
+  workflow_dispatch: 
+
+jobs:
+  sort-json:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Sort data
+        run: |
+          node -e "
+          const fs = require('fs');
+          const filePath = '_data/graveyard.json';
+          const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+          
+          data.sort((a, b) => {
+            // sort by type alphabetically
+            const typeCompare = a.type.localeCompare(b.type);
+            if (typeCompare !== 0) return typeCompare;
+            
+            // sort by name A-Z within that type
+            return a.name.localeCompare(b.name);
+          });
+          
+          fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+          "
+
+      - name: Commit & push
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add _data/graveyard.json
+          git commit -m "chore: auto-sort graveyard.json by type and name" || echo "No changes to commit"
+          git push
