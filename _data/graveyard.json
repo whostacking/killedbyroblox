@@ -200,6 +200,30 @@
     "type": "feature"
   },
   {
+    "name": "My Feed",
+    "dateOpen": "2009-07-30",
+    "dateClose": "2022-01-26",
+    "link": "https://devforum.roblox.com/t/sunsetting-the-my-feed-tab/1633088",
+    "description": "My Feed was a feature on Roblox where players could receive updates to their status such as latest shouts from groups they were in, receive updates from games if they were following them, as well as receive status updates from users on their friends list.",
+    "type": "feature"
+  },
+  {
+    "name": "MEGA places",
+    "dateOpen": "2011-08-11",
+    "dateClose": "2014-07-28",
+    "link": "https://roblox.fandom.com/wiki/MEGA_place",
+    "description": "MEGA places were games whose servers could hold up to 50 players or more with a reduced amount of lag than normal due to increased capabilities of the computation power with additional players. ",
+    "type": "feature"
+  },
+  {
+    "name": "Outlines",
+    "dateOpen": "2013-07-11",
+    "dateClose": "2020-05-19",
+    "link": "https://devforum.roblox.com/t/removing-outlines/504226",
+    "description": "outlines were dark, pixel-shaded lines that appeared around the edges of Parts.",
+    "type": "feature"
+  },
+  {
     "name": "User advertisements",
     "dateOpen": "2008-11-21",
     "dateClose": "2024-06-17",
@@ -277,6 +301,14 @@
     "dateClose": "2018-06-28",
     "link": "https://devforum.roblox.com/t/announcing-the-new-developer-hub/140756",
     "description": "the Roblox Developer Wiki was the official resource about Roblox development. It gathered tutorials and guides on game development and had an API reference with documentation on classes and the global namespace.",
+    "type": "website"
+  },
+  {
+    "name": "m.roblox.com",
+    "dateOpen": "2012-08-26",
+    "dateClose": "2017-01-24",
+    "link": "https://roblox.fandom.com/wiki/M.roblox.com",
+    "description": "m.roblox.com used to be a variant of the mobile version of the Roblox site. ",
     "type": "website"
   },
   {
