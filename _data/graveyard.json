@@ -16,6 +16,110 @@
     "type": "feature"
   },
   {
+    "name": "All Things Roblox",
+    "dateOpen": "2004-06-30",
+    "dateClose": "2017-07-27",
+    "link": "https://roblox.fandom.com/wiki/All_Things_Roblox",
+    "description": "All Things Roblox was one of the four Roblox section subforums.",
+    "type": "feature"
+  },
+  {
+    "name": "BC Exclusive items",
+    "dateOpen": "2010-05-29",
+    "dateClose": "2019-04-30",
+    "link": "https://roblox.fandom.com/wiki/BC_Exclusive_items",
+    "description": "BC Exclusive items could only be bought by people with Builders Club membership.",
+    "type": "feature"
+  },
+  {
+    "name": "Bevels",
+    "dateOpen": "2003-12-01",
+    "dateClose": "2013-04-04",
+    "link": "https://web.archive.org/web/20130407040857/http://blog.roblox.com/2013/04/bye-bye-bevels-the-first-step-toward-our-new-look/",
+    "description": "Bevels are a partially discontinued graphical Roblox feature, which rendered smooth, 45-degree edges on meshless Parts.",
+    "type": "feature"
+  },
+  {
+    "name": "Classic heads",
+    "dateOpen": "2008-12-17",
+    "dateClose": "2026-03-24",
+    "link": "https://roblox.fandom.com/wiki/Classic_head",
+    "description": "Classic heads were Marketplace assets that change the mesh of an avatar's head.",
+    "type": "feature"
+  },
+  {
+    "name": "Faces",
+    "dateOpen": "2009-01-15",
+    "dateClose": "2026-03-24",
+    "link": "https://roblox.fandom.com/wiki/Face",
+    "description": "Faces were Marketplace assets that changed the image of an avatar's head.",
+    "type": "feature"
+  },
+  {
+    "name": "Comments",
+    "dateOpen": "2007-08-30",
+    "dateClose": "2024-04-23",
+    "link": "https://devforum.roblox.com/t/deprecating-comments-for-marketplace-items/2890881",
+    "description": "Comments, formerly known as Commentary, was a section available through assets on the Roblox website.",
+    "type": "feature"
+  },
+  {
+    "name": "Star Codes",
+    "dateOpen": "2019-04-29",
+    "dateClose": "2025-10-24",
+    "link": "https://roblox.fandom.com/wiki/Star_Code",
+    "description": "The Star Code was a feature that was implemented on April 29, 2019. Its main purpose is to support and feature those in the Roblox Video Stars Program.",
+    "type": "feature"
+  },
+  {
+    "name": "Xbox One S Roblox Bundle",
+    "dateOpen": "2020-03-17",
+    "dateClose": "2023-12-31",
+    "link": "https://roblox.fandom.com/wiki/Xbox_One_S_Roblox_Bundle",
+    "description": "The Xbox One S Roblox Bundle was a Xbox One S bundle created by Microsoft for the Xbox One S. Purchasing the bundle granted exclusive Rthro avatar bundles, avatar accessories, and Robux.",
+    "type": "service"
+  },
+  {
+    "name": "Builders Club",
+    "dateOpen": "2007-04-12",
+    "dateClose": "2019-09-23",
+    "link": "https://web.archive.org/web/20220724230516/https://blog.roblox.com/2019/09/introducing-roblox-premium/",
+    "description": "Builders Club (BC) was a Roblox membership split into 3 tiers that granted users extra privileges.",
+    "type": "service"
+  },
+  { 
+    "name": "Roblox Premium",
+    "dateOpen": "2019-09-23",
+    "dateClose": "2026-04-30",
+    "link": "https://en.help.roblox.com/hc/en-us/articles/360024256251-Roblox-Premium-Membership",
+    "description": "Roblox Premium is an outgoing paid membership that gives users perks and benefits.",
+    "type": "service"
+  },
+  {
+    "name": "Clans",
+    "dateOpen": "2014-04-22",
+    "dateClose": "2019-01-23",
+    "link": "https://devforum.roblox.com/t/sunsetting-clans/230005",
+    "description": "Clans were groups of people that could compete for the top spot on a game's Leaderboard. They got to the top spot by earning Player points from that game.",
+    "type": "service"
+  },
+  {
+    "name": "Ambassador program",
+    "dateOpen": "2009-04-22",
+    "dateClose": "2012-03-06",
+    "link": "https://web.archive.org/web/20160216085500/http://blog.roblox.com/2012/03/simpplifyingroblox/",
+    "description": "The Ambassador Program acted as a Roblox referral system members to gain more Tickets.",
+    "type": "service"
+  },
+  {
+    "name": "Engagement-Based Payouts",
+    "dateOpen": "2020-02-19",
+    "dateClose": "2025-07-24",
+    "link": "https://devforum.roblox.com/t/introducing-creator-rewards-earn-more-by-growing-the-community/3777628",
+    "description": "Engagement-Based Payouts (formerly Premium Payout) was a feature which allow developers to be paid in Robux based on how much time Premium subscribers spend in your game.",
+    "type": "feature"
+  },
+  {
     "name": "Guilded",
     "dateOpen": "2017-03-17",
     "dateClose": "2025-12-19",
@@ -30,5 +134,21 @@
     "link": "https://archive.froast.io/forum/228429979",
     "description": "The Roblox Forums were used for discussing and socializing with other people in a text-based format. The forums housed different subforums that each had their purposes.",
     "type": "service"
+  },
+  {
+    "name": "Luobu",
+    "dateOpen": "2021-07-13",
+    "dateClose": "2022-07-22",
+    "link": "https://roblox.fandom.com/wiki/Luobu",
+    "description": "Luobu was the mainland Chinese version of Roblox.",
+    "type": "service"
+  },
+  {
+    "name": "Toys",
+    "dateOpen": "2017-02-01",
+    "dateClose": "2023-06-25",
+    "link": "https://xcancel.com/Bloxy_News/status/1674849480158629888",
+    "description": "Roblox toys were physical real life small collectible mini-figures and playsets based on various notable characters, users, experiences and other elements of the Roblox universe.",
+    "type": "miscellaneous"
   }
 ]
