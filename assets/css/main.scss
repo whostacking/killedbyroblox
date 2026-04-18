@@ -3,11 +3,40 @@
 
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,600,700');
 
+:root {
+    --bg-color: #f2f2f2;
+    --text-color: #393939;
+    --card-bg: white;
+    --card-border: #d6d6d6;
+    --card-hover-shadow: rgba(0,0,0,0.1);
+    --secondary-text: #666;
+    --muted-text: #999;
+    --hero-bg: url('../images/roblox_bg.jpg');
+    --icon-filter: none;
+    --footer-bg: #111;
+    --footer-opacity: 0.4;
+}
+
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --text-color: #f2f2f2;
+    --card-bg: #2a2a2a;
+    --card-border: #444;
+    --card-hover-shadow: rgba(0,0,0,0.3);
+    --secondary-text: #ccc;
+    --muted-text: #888;
+    --hero-bg: url('../images/roblox_dark_bg.png');
+    --icon-filter: invert(1);
+    --footer-bg: #000;
+    --footer-opacity: 0.2;
+}
+
 body {
     font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
     margin: 0;
-    background-color: #f2f2f2;
-    color: #393939;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
 }
 
 a {
@@ -19,9 +48,30 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Theme Toggle */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    backdrop-filter: blur(5px);
+}
+
 /* Hero Section */
 .heroSection {
-    background-image: url('../images/roblox_bg.jpg');
+    background-image: var(--hero-bg);
     background-size: cover;
     background-position: center;
     height: 450px;
@@ -69,7 +119,7 @@ a:hover {
 
 /* Controls / Search */
 .controls {
-    background: white;
+    background: var(--card-bg);
     padding: 20px;
     margin: -30px auto 30px;
     max-width: 900px;
@@ -89,17 +139,19 @@ a:hover {
 .searchBox {
     width: 100%;
     padding: 10px;
-    border: 1px solid #c3c3c3;
+    border: 1px solid var(--card-border);
     border-radius: 3px;
     font-size: 16px;
     box-sizing: border-box;
+    background: var(--card-bg);
+    color: var(--text-color);
 }
 
 /* Roblox 2016 Style Dropdown */
 .filterSelect {
     appearance: none;
-    background-color: #fff;
-    border: 1px solid #c3c3c3;
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
     border-radius: 3px;
     padding: 10px 35px 10px 12px;
     font-size: 14px;
@@ -110,7 +162,7 @@ a:hover {
     background-position: right 10px center;
     background-repeat: no-repeat;
     background-size: 16px 16px;
-    color: #393939;
+    color: var(--text-color);
 }
 
 .filterSelect:focus {
@@ -118,7 +170,7 @@ a:hover {
     border-color: #00a2ff;
 }
 
-/* List Items - Restoring original structure with Roblox UI */
+/* List Items */
 .listContainer {
     display: grid;
     gap: 3rem;
@@ -148,22 +200,22 @@ a:hover {
     flex: 0 0 30%;
     margin: 1em auto;
     max-width: 100%;
-    background: white;
-    border: 1px solid #d6d6d6;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
     border-radius: 3px;
     padding: 20px;
-    transition: box-shadow 0.2s;
+    transition: box-shadow 0.2s, background-color 0.3s;
 }
 
 .listItem:hover {
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px var(--card-hover-shadow);
 }
 
 .iconContainer {
     flex-basis: 100px;
     flex-shrink: 0;
     text-align: center;
-    border-right: 1px solid #eee;
+    border-right: 1px solid var(--card-border);
     margin-right: 20px;
     padding-right: 10px;
 }
@@ -172,11 +224,12 @@ a:hover {
     height: 50px;
     width: 50px;
     margin-bottom: 10px;
+    filter: var(--icon-filter);
 }
 
 .ageRange {
     font-size: 0.75em;
-    color: #999;
+    color: var(--muted-text);
 }
 
 .badge {
@@ -206,7 +259,7 @@ a:hover {
 }
 
 .listItem h2 a {
-    color: #393939;
+    color: var(--text-color);
     border-bottom: 1px dotted transparent;
 }
 
@@ -219,12 +272,12 @@ a:hover {
     font-size: 0.9em;
     line-height: 1.5;
     margin: 0;
-    color: #666;
+    color: var(--secondary-text);
 }
 
 .relativeDate {
     font-weight: 600;
-    color: #393939;
+    color: var(--text-color);
     display: block;
     margin-bottom: 5px;
 }
@@ -234,14 +287,14 @@ a:hover {
     font-size: 0.85em;
 }
 
-/* Footer - Restoring original with banner */
+/* Footer */
 .footerContainer {
     position: relative;
     color: #fafafa;
     font-size: 1em;
     padding: 80px 0;
     margin-top: 50px;
-    background-color: #111; /* Fallback */
+    background-color: var(--footer-bg);
     overflow: hidden;
 }
 
@@ -255,7 +308,7 @@ a:hover {
     z-index: 1;
     background: url('../images/background.png') no-repeat center center;
     background-size: cover;
-    opacity: 0.4;
+    opacity: var(--footer-opacity);
 }
 
 .footerContainer .flexWrap {
@@ -286,6 +339,7 @@ a:hover {
 
 .tombstoneIcon {
     margin-right: 10px;
+    filter: invert(1);
 }
 
 .copyNotice {
