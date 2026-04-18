@@ -216,6 +216,14 @@
     "type": "feature"
   },
   {
+    "name": "Super Safe Chat",
+    "dateOpen": "2007-03-27",
+    "dateClose": "2014-04-03",
+    "link": "https://roblox.fandom.com/wiki/Chat#Filtering",
+    "description": "Super Safe Chat was a feature added on March 27, 2007, to allow Roblox to comply with COPPA. It prevented under-thirteen users from typing custom messages in the chat, to help prevent these users from seeing/typing expletives and/or profanity.",
+    "type": "feature"
+  },
+  {
     "name": "System badges",
     "dateOpen": "2006-12-22",
     "dateClose": "2026-02-10",
