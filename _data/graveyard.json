@@ -176,6 +176,14 @@
     "type": "feature"
   },
   {
+    "name": "Personal Servers",
+    "dateOpen": "2011-11-02",
+    "dateClose": "2016-06-08",
+    "link": "https://static.wikia.nocookie.net/roblox/images/a/a5/Bandicam_2016-06-05_13-27-30-554.jpg/revision/latest",
+    "description": "Personal Servers (also known as Personal Build Servers) allowed users to create their own Places with other users by giving them permission.",
+    "type": "feature"
+  },
+  {
     "name": "Player Points",
     "dateOpen": "2014-04-15",
     "dateClose": "2023-06-30",
@@ -216,11 +224,11 @@
     "type": "feature"
   },
   {
-    "name": "Personal Servers",
-    "dateOpen": "2011-11-02",
-    "dateClose": "2016-06-08",
-    "link": "https://static.wikia.nocookie.net/roblox/images/a/a5/Bandicam_2016-06-05_13-27-30-554.jpg/revision/latest",
-    "description": "Personal Servers (also known as Personal Build Servers) allowed users to create their own Places with other users by giving them permission.",
+    "name": "User advertisements",
+    "dateOpen": "2008-11-21",
+    "dateClose": "2024-06-17",
+    "link": "https://devforum.roblox.com/t/sunsetting-user-ads-and-improvements-to-sponsored-experiences/3004673",
+    "description": "user advertisements  were a community-driven feature that allowed players to create and run their own banners, skyscrapers, and squares to promote games, clothing, or groups.",
     "type": "feature"
   },
   {
@@ -229,14 +237,6 @@
     "dateClose": "2017-01-01",
     "link": "https://devforum.roblox.com/t/old-terrain-is-deprecated-and-will-be-removed-in-january-2017/28214",
     "description": "voxel terrain, also known as legacy terrain or simply old terrain, was the original terrain system. The terrain was made up of many individual cells with simple shapes such as ramps, cubes and corner ramps.",
-    "type": "feature"
-  },
-  {
-    "name": "User advertisements",
-    "dateOpen": "2008-11-21",
-    "dateClose": "2024-06-17",
-    "link": "https://devforum.roblox.com/t/sunsetting-user-ads-and-improvements-to-sponsored-experiences/3004673",
-    "description": "user advertisements  were a community-driven feature that allowed players to create and run their own banners, skyscrapers, and squares to promote games, clothing, or groups.",
     "type": "feature"
   },
   {
@@ -256,14 +256,6 @@
     "type": "service"
   },
   {
-    "name": "Lifetime Builders Club",
-    "dateOpen": "2007-04-12",
-    "dateClose": "2015-08-04",
-    "link": "https://roblox.fandom.com/wiki/Builders_Club#Discontinued_membership_plans",
-    "description": "Lifetime Builders Club was a Roblox membership that allowed users to pay a one-time fee for Builders Club for 100 years.",
-    "type": "service"
-  },
-  {
     "name": "Clans",
     "dateOpen": "2014-04-22",
     "dateClose": "2019-01-23",
@@ -277,6 +269,14 @@
     "dateClose": "2017-12-04",
     "link": "https://archive.froast.io/forum/228429979",
     "description": "the Roblox Forums were used for discussing and socializing with other people in a text-based format. The forums housed different subforums that each had their purposes.",
+    "type": "service"
+  },
+  {
+    "name": "Lifetime Builders Club",
+    "dateOpen": "2007-04-12",
+    "dateClose": "2015-08-04",
+    "link": "https://roblox.fandom.com/wiki/Builders_Club#Discontinued_membership_plans",
+    "description": "Lifetime Builders Club was a Roblox membership that allowed users to pay a one-time fee for Builders Club for 100 years.",
     "type": "service"
   },
   {
