@@ -1,0 +1,23 @@
+<li class="listItem" data-type="{{ include.item.type }}" data-name="{{ include.item.name | downcase }}" data-description="{{ include.item.description | downcase }}">
+    <div class="iconContainer">
+        <img class="icon" src="{{ '/assets/images/tombstone.svg' | relative_url }}" alt="Tombstone" data-date="{{ include.item.dateClose }}">
+        <div class="ageRange">
+            {% assign open_year = include.item.dateOpen | date: "%Y" %}
+            {% assign close_year = include.item.dateClose | date: "%Y" %}
+            <time datetime="{{ include.item.dateOpen }}" title="{{ include.item.dateOpen }}">{{ open_year }}</time>
+            -
+            <time datetime="{{ include.item.dateClose }}" title="{{ include.item.dateClose }}">{{ close_year }}</time>
+        </div>
+        <div class="badge">{{ include.item.type }}</div>
+    </div>
+    <div class="contentContainer">
+        <h2>
+            <a href="{{ include.item.link }}" target="_blank" rel="noopener noreferrer">{{ include.item.name }}</a>
+        </h2>
+        <p class="description">
+            <span class="relativeDate" data-date="{{ include.item.dateClose }}"></span>
+            {{ include.item.description }}
+            <span class="duration" data-open="{{ include.item.dateOpen }}" data-close="{{ include.item.dateClose }}"></span>
+        </p>
+    </div>
+</li>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+    <meta name="google-site-verification" content="0aMOjDyGqyGcfAserGZGdptvpvLBgfIfKTiq9q8dBdU" />
+    <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/tombstone.svg' | relative_url }}">
+    {% seo %}
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+</head>
+<body>
+    <section class="heroSection">
+        <div class="theme-switcher-container">
+            <button class="theme-toggle-btn" id="theme-toggle">Dark Mode</button>
+        </div>
+        <div class="heroContent">
+            <img src="{{ '/assets/images/roblox_logo.png' | relative_url }}" class="heroLogo" alt="Roblox Logo">
+            <div class="heroTagline">Killed by ROBLOX</div>
+        </div>
+    </section>
+
+    <main>
+        {{ content }}
+    </main>
+    
+    {% include footer.html %}
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html>
