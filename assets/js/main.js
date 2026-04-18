@@ -7,7 +7,6 @@
         'Done for',
         'Expiring',
         'Biting the big one',
-        'Off to the glue factory',
         'Another one bites the dust',
         'To be turned off',
         'Like a fork stuck in the outlet',
@@ -21,7 +20,7 @@
         'Getting KO\'d',
         'Running out of juice',
         'Fading into darkness',
-        'Floating belly up'
+        'Getting bloxxed'
     ];
     function getIdiom(relativeDate) {
         const seed = relativeDate.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
@@ -64,10 +63,10 @@
             const isPast = now > dateClose;
             const relativeDateStr = formatDistanceToNow(dateClose);
             if (isPast) {
-                iconEl.src = '/assets/images/tombstone.svg';
+                iconEl.src = '/killedbyroblox/assets/images/tombstone.svg';
                 iconEl.alt = 'Tombstone';
             } else {
-                iconEl.src = '/assets/images/guillotine.svg';
+                iconEl.src = '/killedbyroblox/assets/images/guillotine.svg';
                 iconEl.alt = 'Guillotine';
             }
             const relativeDateEl = item.querySelector('.relativeDate');
