@@ -114,27 +114,39 @@
 
     // Theme Toggle Logic
     const themeToggle = document.getElementById('theme-toggle');
-    const currentTheme = localStorage.getItem('theme') || 'light';
-
-    if (currentTheme === 'dark') {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        themeToggle.textContent = 'Light Mode';
-    } else {
-        themeToggle.textContent = 'Dark Mode';
-    }
-
-    themeToggle.addEventListener('click', () => {
-        let theme = document.documentElement.getAttribute('data-theme');
-        if (theme === 'dark') {
-            document.documentElement.removeAttribute('data-theme');
-            localStorage.setItem('theme', 'light');
-            themeToggle.textContent = 'Dark Mode';
-        } else {
-            document.documentElement.setAttribute('data-theme', 'dark');
-            localStorage.setItem('theme', 'dark');
-            themeToggle.textContent = 'Light Mode';
+    const getStoredTheme = () => {
+        try {
+            return localStorage.getItem('theme');
+        } catch {
+            return null;
         }
-    });
+    };
+    const setStoredTheme = (theme) => {
+        try {
+            localStorage.setItem('theme', theme);
+        } catch {
+            // Ignore storage failures; the in-page theme still updates.
+        }
+    };
+    const applyTheme = (theme) => {
+        if (theme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            themeToggle.textContent = 'Light Mode';
+        } else {
+            document.documentElement.removeAttribute('data-theme');
+            themeToggle.textContent = 'Dark Mode';
+        }
+    };
+
+    if (themeToggle) {
+        applyTheme(getStoredTheme() || 'light');
+
+        themeToggle.addEventListener('click', () => {
+            const nextTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            applyTheme(nextTheme);
+            setStoredTheme(nextTheme);
+        });
+    }
 
     document.getElementById('searchBox').addEventListener('input', filterItems);
     document.getElementById('filter-select').addEventListener('change', filterItems);
