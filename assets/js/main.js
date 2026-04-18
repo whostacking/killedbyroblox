@@ -118,7 +118,9 @@
 
     if (currentTheme === 'dark') {
         document.documentElement.setAttribute('data-theme', 'dark');
-        themeToggle.textContent = '☀️';
+        themeToggle.textContent = 'Light Mode';
+    } else {
+        themeToggle.textContent = 'Dark Mode';
     }
 
     themeToggle.addEventListener('click', () => {
@@ -126,11 +128,11 @@
         if (theme === 'dark') {
             document.documentElement.removeAttribute('data-theme');
             localStorage.setItem('theme', 'light');
-            themeToggle.textContent = '🌙';
+            themeToggle.textContent = 'Dark Mode';
         } else {
             document.documentElement.setAttribute('data-theme', 'dark');
             localStorage.setItem('theme', 'dark');
-            themeToggle.textContent = '☀️';
+            themeToggle.textContent = 'Light Mode';
         }
     });
 
