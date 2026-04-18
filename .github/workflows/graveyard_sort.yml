@@ -32,7 +32,7 @@ jobs:
           data.sort((a, b) => {
             const typeA = a.type.toLowerCase();
             const typeB = b.type.toLowerCase();
-            const misc = 'miscellaneous';
+            const misc = 'misc';
 
             // handle 'miscellaneous' priority
             if (typeA === misc && typeB !== misc) return 1;
