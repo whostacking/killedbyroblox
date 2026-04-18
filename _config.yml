@@ -1,0 +1,13 @@
+title: Killed by Roblox
+description: Killed by Roblox is the Roblox graveyard; a free and open source list of discontinued Roblox services, products, and features. We aim to be a source of factual information about the history surrounding Roblox's dead projects.
+url: "https://whostacking.github.io/killedbyroblox"
+twitter:
+  username: whostacking
+  card: summary_large_image
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+exclude:
+  - node_modules/
+  - vendor/
+  - Gemfile.lock

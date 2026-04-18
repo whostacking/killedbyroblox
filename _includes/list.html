@@ -1,0 +1,6 @@
+<ul class="listContainer">
+    {% assign sorted_graveyard = site.data.graveyard | sort: "dateClose" | reverse %}
+    {% for item in sorted_graveyard %}
+        {% include item.html item=item %}
+    {% endfor %}
+</ul>

@@ -1,0 +1,74 @@
+#!/usr/bin/env ruby
+require "json"
+require "date"
+
+def slugify(str)
+  str.downcase.gsub("+", "plus").gsub("@", "at").gsub(/[^a-z0-9]/, "-").gsub(/-+/, "-").delete_prefix("-").delete_suffix("-")
+end
+
+graveyard_path = File.expand_path("../_data/graveyard.json", __dir__)
+graveyard = JSON.parse(File.read(graveyard_path))
+
+puts "Product name?"
+name = gets.chomp
+if graveyard.any? { |e| slugify(e["name"]) == slugify(name) }
+  puts "A entry with the name "#{name}" already exists."
+  exit
+end
+
+puts "Date opened? (yyyy-mm-dd)"
+date_open = gets.chomp
+begin
+  Date.parse(date_open)
+rescue
+  puts "Invalid date format."
+  exit
+end
+
+puts "Date closed? (yyyy-mm-dd)"
+date_close = gets.chomp
+begin
+  close_date = Date.parse(date_close)
+  open_date = Date.parse(date_open)
+  if close_date < open_date
+    puts "Date closed must be after opening date."
+    exit
+  end
+rescue
+  puts "Invalid date format."
+  exit
+end
+
+puts "Link"
+link = gets.chomp
+
+puts "Description (single sentence, start with product name, past tense)"
+description = gets.chomp
+
+puts "Which category? (feature, service, app)"
+type = gets.chomp
+unless ["feature", "service", "app"].include?(type)
+  puts "Invalid category."
+  exit
+end
+
+product = {
+  "name" => name,
+  "dateOpen" => date_open,
+  "dateClose" => date_close,
+  "link" => link,
+  "description" => description,
+  "type" => type
+}
+
+puts JSON.pretty_generate(product)
+puts "Update _data/graveyard.json with this product? (y/n)"
+confirm = gets.chomp
+if confirm.downcase == "y"
+  graveyard << product
+  File.write(graveyard_path, JSON.pretty_generate(graveyard) + "
+")
+  puts "Product successfully added to _data/graveyard.json!"
+else
+  puts "Nothing was changed!"
+end

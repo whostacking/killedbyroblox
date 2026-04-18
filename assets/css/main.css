@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,600,700');
+
+:root {
+    --bg-color: #f2f2f2;
+    --text-color: #393939;
+    --card-bg: white;
+    --card-border: #d6d6d6;
+    --card-hover-shadow: rgba(0,0,0,0.1);
+    --secondary-text: #666;
+    --muted-text: #999;
+    --hero-bg: url('../images/roblox_bg.jpg');
+    --icon-filter: none;
+    --footer-bg: #111;
+    --footer-opacity: 0.4;
+    --btn-bg: #0693e5;
+    --btn-hover: #0078bd;
+}
+
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --text-color: #f2f2f2;
+    --card-bg: #2a2a2a;
+    --card-border: #444;
+    --card-hover-shadow: rgba(0,0,0,0.3);
+    --secondary-text: #ccc;
+    --muted-text: #888;
+    --hero-bg: url('../images/roblox_dark_bg.png');
+    --icon-filter: invert(1);
+    --footer-bg: #000;
+    --footer-opacity: 0.2;
+    --btn-bg: #444;
+    --btn-hover: #555;
+}
+
+body {
+    font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+a {
+    color: currentColor;
+    text-decoration: none;
+    border-bottom: 1px dotted currentColor;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Theme Toggle Container */
+.theme-switcher-container {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    z-index: 1000;
+}
+
+/* Roblox 2016 Style Button */
+.theme-toggle-btn {
+    background-color: oklch(from var(--btn-bg) l c h / 70%);
+    color: white;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 3px;
+    padding: 6px 15px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+    text-transform: uppercase;
+    backdrop-filter: blur(5px);
+}
+
+.theme-toggle-btn:hover {
+    background-color: var(--btn-hover);
+}
+
+/* Hero Section */
+.heroSection {
+    background-image: var(--hero-bg);
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: white;
+    transition: .5s background-image;
+}
+
+.heroSection::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.heroContent {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heroLogo {
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+.heroTagline {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 5px 20px;
+    font-size: 24px;
+    font-weight: 300;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Controls / Search */
+.controls {
+    background: var(--card-bg);
+    padding: 20px;
+    margin: -30px auto 30px;
+    max-width: 900px;
+    position: relative;
+    z-index: 3;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    display: flex;
+    gap: 20px;
+    border-radius: 3px;
+    align-items: center;
+}
+
+.searchContainer {
+    flex: 1;
+}
+
+.searchBox {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--card-border);
+    border-radius: 3px;
+    font-size: 16px;
+    box-sizing: border-box;
+    background: var(--card-bg);
+    color: var(--text-color);
+}
+
+/* Roblox 2016 Style Dropdown */
+.filterSelect {
+    appearance: none;
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 3px;
+    padding: 10px 35px 10px 12px;
+    font-size: 14px;
+    font-family: inherit;
+    cursor: pointer;
+    min-width: 200px;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    color: var(--text-color);
+}
+
+.filterSelect:focus {
+    outline: none;
+    border-color: currentColor;
+}
+
+/* List Items */
+.listContainer {
+    display: grid;
+    gap: 1rem 2rem;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    list-style-type: none;
+    margin: 0 auto;
+    max-width: 1400px;
+    padding: 0;
+}
+
+@media screen and (max-width: 1300px) {
+    .listContainer {
+        grid-template-columns: repeat(2, minmax(300px, 1fr));
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .listContainer {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+        gap: 0.5rem;
+    }
+
+    .listContainer > * {
+        width: 100%;
+    }
+}
+
+.listItem {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 30%;
+    margin: 1em auto;
+    max-width: 100%;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 3px;
+    padding: 20px;
+    transition: box-shadow 0.2s, background-color 0.3s;
+}
+
+.listItem:hover {
+    box-shadow: 0 2px 8px var(--card-hover-shadow);
+}
+
+.iconContainer {
+    flex-basis: 100px;
+    flex-shrink: 0;
+    text-align: center;
+    border-right: 1px solid var(--card-border);
+    margin-right: 20px;
+    padding-right: 10px;
+}
+
+.icon {
+    height: 50px;
+    width: 50px;
+    margin-bottom: 10px;
+    filter: var(--icon-filter);
+}
+
+.ageRange {
+    font-size: 0.75em;
+    color: var(--muted-text);
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.25em 0.5em;
+    font-size: 0.75em;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+    background-color: var(--btn-bg);
+    color: white;
+    margin-top: 0.5rem;
+    text-transform: capitalize;
+}
+
+.contentContainer {
+    flex: 1;
+}
+
+.listItem h2 {
+    font-weight: 400;
+    margin: 0 0 10px 0;
+    font-size: 1.25rem;
+}
+
+.listItem h2 a {
+    color: var(--text-color);
+    border-bottom: 1px dotted transparent;
+}
+
+.listItem h2 a:hover {
+    border-bottom: 1px dotted currentColor;
+    text-decoration: none;
+}
+
+.description {
+    font-size: 0.9em;
+    line-height: 1.5;
+    margin: 0;
+    color: var(--secondary-text);
+}
+
+.relativeDate {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+/* Footer */
+.footerContainer {
+    position: relative;
+    font-size: 1em;
+    padding: 80px 0;
+    margin-top: 50px;
+    overflow: hidden;
+}
+
+.footerContainer::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: url('../images/background.png') no-repeat center center;
+    background-size: cover;
+    opacity: var(--footer-opacity);
+    mask-image: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.8));
+}
+
+.footerContainer .flexWrap {
+    position: relative;
+    z-index: 2;
+    margin: 0 auto;
+    max-width: 90%;
+    text-align: center;
+    width: 38em;
+}
+
+.footerTitle {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.footerTitle .title {
+    font-size: 2.5em;
+    font-weight: 300;
+}
+
+.tombstoneIcon {
+    margin-right: 10px;
+}
+
+[data-theme="dark"] .tombstoneIcon {
+    filter: invert(1);
+}
+
+.copyNotice {
+    font-size: 0.75em;
+    margin: 30px 0 20px 0;
+    text-align: center;
+}
+
+.socialWrapper {
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    gap: 20px;
+}
+
+.socialWrapper a {
+    display: block;
+    border: none;
+}
+
+.socialImage {
+    opacity: 0.8;
+}
+
+[data-theme="dark"] .socialImage {
+    filter: invert(1);
+}
+
+.srt {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    word-wrap: normal;
+}
+
+@media screen and (max-width: 700px) {
+    .controls {
+        flex-direction: column;
+        margin: 20px;
+        margin-top: -20px;
+    }
+    .heroSection {
+        height: 300px;
+    }
+    .heroLogo {
+        max-width: 250px;
+    }
+}
