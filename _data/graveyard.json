@@ -88,6 +88,14 @@
     "type": "feature"
   },
   {
+    "name": "Best Friends",
+    "dateOpen": "2009-07-30",
+    "dateClose": "2015-02-04",
+    "link": "https://web.archive.org/web/20150207073624/https://blog.roblox.com/2015/02/friends-and-followers-makes-roblox-more-social-and-even-more-fun/",
+    "description": "Best Friends was a feature where users could set 10 users to be their best friends. When a user was set as a best friend, users could see their status updates via the feed, which was originally on the profile.",
+    "type": "feature"
+  },
+  {
     "name": "Bevels",
     "dateOpen": "2003-12-01",
     "dateClose": "2013-04-04",
