@@ -216,6 +216,22 @@
     "type": "feature"
   },
   {
+    "name": "Personal Servers",
+    "dateOpen": "2011-11-02",
+    "dateClose": "2016-06-08",
+    "link": "https://static.wikia.nocookie.net/roblox/images/a/a5/Bandicam_2016-06-05_13-27-30-554.jpg/revision/latest",
+    "description": "Personal Servers (also known as Personal Build Servers) allowed users to create their own Places with other users by giving them permission.",
+    "type": "feature"
+  },
+  {
+    "name": "Voxel terrain",
+    "dateOpen": "2011-10-07",
+    "dateClose": "2017-01-01",
+    "link": "https://devforum.roblox.com/t/old-terrain-is-deprecated-and-will-be-removed-in-january-2017/28214",
+    "description": "voxel terrain, also known as legacy terrain or simply old terrain, was the original terrain system. The terrain was made up of many individual cells with simple shapes such as ramps, cubes and corner ramps.",
+    "type": "feature"
+  },
+  {
     "name": "User advertisements",
     "dateOpen": "2008-11-21",
     "dateClose": "2024-06-17",
@@ -237,6 +253,14 @@
     "dateClose": "2019-09-23",
     "link": "https://web.archive.org/web/20220724230516/https://blog.roblox.com/2019/09/introducing-roblox-premium/",
     "description": "Builders Club (BC) was a Roblox membership split into 3 tiers that granted users extra privileges.",
+    "type": "service"
+  },
+  {
+    "name": "Lifetime Builders Club",
+    "dateOpen": "2007-04-12",
+    "dateClose": "2015-08-04",
+    "link": "https://roblox.fandom.com/wiki/Builders_Club#Discontinued_membership_plans",
+    "description": "Lifetime Builders Club was a Roblox membership that allowed users to pay a one-time fee for Builders Club for 100 years.",
     "type": "service"
   },
   {
