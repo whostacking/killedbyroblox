@@ -11,9 +11,18 @@
 </head>
 <body>
     {% include header.html %}
+    
+    <section class="heroSection">
+        <div class="heroContent">
+            <img src="{{ '/assets/images/roblox_logo.png' | relative_url }}" class="heroLogo" alt="Roblox Logo">
+            <div class="heroTagline">Powering Imagination</div>
+        </div>
+    </section>
+
     <main>
         {{ content }}
     </main>
+    
     {% include footer.html %}
     <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 </body>
