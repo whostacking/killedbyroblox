@@ -19,41 +19,6 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Header / Navigation */
-.headerContainer {
-    background-color: #0074bd;
-    padding: 5px 0;
-    display: flex;
-    justify-content: center;
-    border-bottom: 1px solid #005b94;
-}
-
-.headerLink {
-    display: flex;
-    align-items: center;
-    max-width: 1200px;
-    width: 100%;
-    padding: 0 15px;
-}
-
-.brandingContainer {
-    display: flex;
-    align-items: center;
-}
-
-.logo img {
-    height: 30px;
-    width: auto;
-}
-
-.headerContainer .title {
-    color: white;
-    font-size: 18px;
-    font-weight: 600;
-    margin-left: 10px;
-    text-transform: uppercase;
-}
-
 /* Hero Section */
 .heroSection {
     background-image: url('../images/roblox_bg.jpg');
@@ -98,6 +63,8 @@ a:hover {
     font-size: 24px;
     font-weight: 300;
     border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 /* Controls / Search */
@@ -112,6 +79,7 @@ a:hover {
     display: flex;
     gap: 20px;
     border-radius: 3px;
+    align-items: center;
 }
 
 .searchContainer {
@@ -127,32 +95,63 @@ a:hover {
     box-sizing: border-box;
 }
 
+/* Roblox 2016 Style Dropdown */
 .filterSelect {
-    padding: 10px;
+    appearance: none;
+    background-color: #fff;
     border: 1px solid #c3c3c3;
     border-radius: 3px;
-    background: white;
-    min-width: 150px;
+    padding: 10px 35px 10px 12px;
+    font-size: 14px;
+    font-family: inherit;
+    cursor: pointer;
+    min-width: 200px;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    color: #393939;
 }
 
-/* List Items */
+.filterSelect:focus {
+    outline: none;
+    border-color: #00a2ff;
+}
+
+/* List Items - Restoring original structure with Roblox UI */
 .listContainer {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 20px;
-    max-width: 1200px;
+    gap: 3rem;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    list-style-type: none;
     margin: 0 auto;
-    padding: 20px;
-    list-style: none;
+    max-width: 1400px;
+    padding: 0;
+}
+
+@media screen and (max-width: 1300px) {
+    .listContainer {
+        grid-template-columns: repeat(2, minmax(300px, 1fr));
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .listContainer {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
 }
 
 .listItem {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 30%;
+    margin: 1em auto;
+    max-width: 100%;
     background: white;
     border: 1px solid #d6d6d6;
     border-radius: 3px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
+    padding: 20px;
     transition: box-shadow 0.2s;
 }
 
@@ -161,100 +160,175 @@ a:hover {
 }
 
 .iconContainer {
-    background: #f2f2f2;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 1px solid #eee;
-    position: relative;
+    flex-basis: 100px;
+    flex-shrink: 0;
+    text-align: center;
+    border-right: 1px solid #eee;
+    margin-right: 20px;
+    padding-right: 10px;
 }
 
 .icon {
-    width: 64px;
-    height: 64px;
+    height: 50px;
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.ageRange {
+    font-size: 0.75em;
+    color: #999;
 }
 
 .badge {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: #00a2ff;
+    display: inline-block;
+    padding: 0.25em 0.5em;
+    font-size: 0.75em;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+    background-color: #00a2ff;
     color: white;
-    font-size: 10px;
-    padding: 2px 6px;
-    border-radius: 2px;
-    text-transform: uppercase;
+    margin-top: 0.5rem;
+    text-transform: capitalize;
 }
 
 .contentContainer {
-    padding: 15px;
     flex: 1;
 }
 
 .listItem h2 {
-    font-size: 18px;
+    font-weight: 400;
     margin: 0 0 10px 0;
+    font-size: 1.25rem;
 }
 
 .listItem h2 a {
     color: #393939;
+    border-bottom: 1px dotted transparent;
+}
+
+.listItem h2 a:hover {
+    border-bottom: 1px dotted #00a2ff;
+    text-decoration: none;
 }
 
 .description {
-    font-size: 14px;
+    font-size: 0.9em;
+    line-height: 1.5;
+    margin: 0;
     color: #666;
-    line-height: 1.4;
 }
 
-.ageRange {
-    font-size: 12px;
-    color: #999;
-    margin-top: 10px;
+.relativeDate {
+    font-weight: 600;
+    color: #393939;
     display: block;
+    margin-bottom: 5px;
 }
 
-/* Footer */
+.duration {
+    font-style: italic;
+    font-size: 0.85em;
+}
+
+/* Footer - Restoring original with banner */
 .footerContainer {
-    background: white;
-    padding: 40px 0;
+    position: relative;
+    color: #fafafa;
+    font-size: 1em;
+    padding: 80px 0;
     margin-top: 50px;
-    border-top: 1px solid #d6d6d6;
+    background-color: #111; /* Fallback */
+    overflow: hidden;
+}
+
+.footerContainer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: url('../images/background.png') no-repeat center center;
+    background-size: cover;
+    opacity: 0.4;
+}
+
+.footerContainer .flexWrap {
+    position: relative;
+    z-index: 2;
+    margin: 0 auto;
+    max-width: 90%;
     text-align: center;
+    width: 38em;
 }
 
-.footerLinks {
-    margin-bottom: 20px;
+.footerContainer a {
+    color: #00a2ff;
 }
 
-.footerLinks a {
-    margin: 0 10px;
-    color: #666;
-    font-size: 14px;
+.footerTitle {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.footerTitle .title {
+    color: #fafafa;
+    font-size: 2.5em;
+    font-weight: 300;
+}
+
+.tombstoneIcon {
+    margin-right: 10px;
 }
 
 .copyNotice {
-    font-size: 12px;
-    color: #999;
+    font-size: 0.75em;
+    margin: 30px 0 20px 0;
+    text-align: center;
 }
 
 .socialWrapper {
-    margin-top: 20px;
     display: flex;
     justify-content: center;
-    gap: 15px;
+    padding: 15px 0;
+    gap: 20px;
 }
 
-.socialWrapper img {
-    width: 24px;
-    height: 24px;
-    opacity: 0.6;
+.socialWrapper a {
+    display: block;
+    border: none;
+}
+
+.socialImage {
+    filter: brightness(0) invert(1);
+    opacity: 0.8;
+}
+
+.srt {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    word-wrap: normal;
 }
 
 @media screen and (max-width: 700px) {
     .controls {
         flex-direction: column;
         margin: 20px;
+        margin-top: -20px;
     }
     .heroSection {
         height: 300px;
