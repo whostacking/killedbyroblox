@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://static.killedbygoogle.com/com/tombstone.png" alt="tombstone" style="height: 80px; width: 80px; padding: 0 20px;">
+  <img src="/assets/images/tombstone.png" alt="tombstone" style="height: 80px; width: 80px; padding: 0 20px;">
   <h1>Killed by Roblox</h1>
   <p>A tribute and log of beloved products and services killed by Roblox.</p>
 </div>

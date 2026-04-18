@@ -64,10 +64,10 @@
             const isPast = now > dateClose;
             const relativeDateStr = formatDistanceToNow(dateClose);
             if (isPast) {
-                iconEl.src = 'https://static.killedbygoogle.com/com/tombstone.svg';
+                iconEl.src = '/assets/images/tombstone.svg';
                 iconEl.alt = 'Tombstone';
             } else {
-                iconEl.src = 'https://static.killedbygoogle.com/com/guillotine.svg';
+                iconEl.src = '/assets/images/guillotine.svg';
                 iconEl.alt = 'Guillotine';
             }
             const relativeDateEl = item.querySelector('.relativeDate');
