@@ -15,8 +15,8 @@
     --icon-filter: none;
     --footer-bg: #111;
     --footer-opacity: 0.4;
-    --btn-bg: #00a2ff;
-    --btn-hover: #0084d1;
+    --btn-bg: #0693e5;
+    --btn-hover: #0078bd;
 }
 
 [data-theme="dark"] {
@@ -44,8 +44,9 @@ body {
 }
 
 a {
-    color: #00a2ff;
+    color: currentColor;
     text-decoration: none;
+    border-bottom: 1px dotted currentColor;
 }
 
 a:hover {
@@ -54,7 +55,7 @@ a:hover {
 
 /* Theme Toggle Container */
 .theme-switcher-container {
-    position: absolute;
+    position: fixed;
     top: 15px;
     right: 20px;
     z-index: 1000;
@@ -62,7 +63,7 @@ a:hover {
 
 /* Roblox 2016 Style Button */
 .theme-toggle-btn {
-    background-color: var(--btn-bg);
+    background-color: oklch(from var(--btn-bg) l c h / 70%);
     color: white;
     border: 1px solid rgba(0,0,0,0.1);
     border-radius: 3px;
@@ -73,6 +74,7 @@ a:hover {
     transition: background-color 0.2s;
     box-shadow: 0 1px 1px rgba(0,0,0,0.2);
     text-transform: uppercase;
+    backdrop-filter: blur(5px);
 }
 
 .theme-toggle-btn:hover {
@@ -84,12 +86,13 @@ a:hover {
     background-image: var(--hero-bg);
     background-size: cover;
     background-position: center;
-    height: 450px;
+    height: 350px;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     color: white;
+    transition: .5s background-image;
 }
 
 .heroSection::after {
@@ -177,13 +180,13 @@ a:hover {
 
 .filterSelect:focus {
     outline: none;
-    border-color: #00a2ff;
+    border-color: currentColor;
 }
 
 /* List Items */
 .listContainer {
     display: grid;
-    gap: 3rem;
+    gap: 1rem 2rem;
     grid-template-columns: repeat(3, minmax(300px, 1fr));
     list-style-type: none;
     margin: 0 auto;
@@ -201,6 +204,11 @@ a:hover {
     .listContainer {
         grid-template-columns: 1fr;
         padding: 0 20px;
+        gap: 0.5rem;
+    }
+
+    .listContainer > * {
+        width: 100%;
     }
 }
 
@@ -252,7 +260,7 @@ a:hover {
     white-space: nowrap;
     vertical-align: baseline;
     border-radius: 0.25rem;
-    background-color: #00a2ff;
+    background-color: var(--btn-bg);
     color: white;
     margin-top: 0.5rem;
     text-transform: capitalize;
@@ -274,7 +282,7 @@ a:hover {
 }
 
 .listItem h2 a:hover {
-    border-bottom: 1px dotted #00a2ff;
+    border-bottom: 1px dotted currentColor;
     text-decoration: none;
 }
 
@@ -288,37 +296,26 @@ a:hover {
 .relativeDate {
     font-weight: 600;
     color: var(--text-color);
-    display: block;
-    margin-bottom: 5px;
-}
-
-.duration {
-    font-style: italic;
-    font-size: 0.85em;
 }
 
 /* Footer */
 .footerContainer {
     position: relative;
-    color: #fafafa;
     font-size: 1em;
     padding: 80px 0;
     margin-top: 50px;
-    background-color: var(--footer-bg);
     overflow: hidden;
 }
 
 .footerContainer::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
+    inset: 0;
+    z-index: -1;
     background: url('../images/background.png') no-repeat center center;
     background-size: cover;
     opacity: var(--footer-opacity);
+    mask-image: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.8));
 }
 
 .footerContainer .flexWrap {
@@ -330,10 +327,6 @@ a:hover {
     width: 38em;
 }
 
-.footerContainer a {
-    color: #00a2ff;
-}
-
 .footerTitle {
     align-items: center;
     display: flex;
@@ -342,13 +335,15 @@ a:hover {
 }
 
 .footerTitle .title {
-    color: #fafafa;
     font-size: 2.5em;
     font-weight: 300;
 }
 
 .tombstoneIcon {
     margin-right: 10px;
+}
+
+[data-theme="dark"] .tombstoneIcon {
     filter: invert(1);
 }
 
@@ -371,8 +366,11 @@ a:hover {
 }
 
 .socialImage {
-    filter: brightness(0) invert(1);
     opacity: 0.8;
+}
+
+[data-theme="dark"] .socialImage {
+    filter: invert(1);
 }
 
 .srt {
