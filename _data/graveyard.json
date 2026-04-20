@@ -160,6 +160,14 @@
     "type": "feature"
   },
   {
+    "name": "Live-Ops",
+    "dateOpen": "2019-05-16",
+    "dateClose": "2019-11-21",
+    "link": "https://devforum.roblox.com/t/an-update-on-live-ops/387186",
+    "description": "Live-Ops (also referred to as Developer Events) was a Roblox system which had replaced the event feature. It aimed to better spotlight games by upcoming and established developers by featuring a few games on the splash page each day.",
+    "type": "feature"
+  },
+  {
     "name": "MEGA places",
     "dateOpen": "2011-08-11",
     "dateClose": "2014-07-28",
@@ -213,6 +221,14 @@
     "dateClose": "2025-10-24",
     "link": "https://roblox.fandom.com/wiki/Star_Code",
     "description": "Star Codes were a feature that was implemented on April 29, 2019. Its main purpose is to support and feature those in the Roblox Video Stars Program.",
+    "type": "feature"
+  },
+  {
+    "name": "Status",
+    "dateOpen": "2009-07-30",
+    "dateClose": "2021-02-24",
+    "link": "https://roblox.fandom.com/wiki/Profile#Status",
+    "description": "Statuses were small blurbs of text that could be set by a user. They were displayed at the top of the profile, under the username. ",
     "type": "feature"
   },
   {
