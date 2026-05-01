@@ -215,22 +215,13 @@ a:hover {
     flex: 0 0 30%;
     margin: 1em auto;
     max-width: 100%;
-    background: var(--card-bg);
-    border: 1px solid var(--card-border);
     border-radius: 3px;
-    padding: 20px;
-    transition: box-shadow 0.2s, background-color 0.3s;
-}
-
-.listItem:hover {
-    box-shadow: 0 2px 8px var(--card-hover-shadow);
 }
 
 .iconContainer {
     flex-basis: 100px;
     flex-shrink: 0;
     text-align: center;
-    border-right: 1px solid var(--card-border);
     margin-right: 20px;
     padding-right: 10px;
 }
@@ -238,7 +229,6 @@ a:hover {
 .icon {
     height: 50px;
     width: 50px;
-    margin-bottom: 10px;
     filter: var(--icon-filter);
 }
 
