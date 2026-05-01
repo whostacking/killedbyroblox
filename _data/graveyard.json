@@ -360,6 +360,14 @@
     "type": "website"
   },
   {
+    "name": "Gotham font",
+    "dateOpen": "2019-02-08",
+    "dateClose": "2024-05-28",
+    "link": "https://devforum.roblox.com/t/introducing-builder-font-deprecating-gotham-and-arial/2868222",
+    "description": "Gotham was a font used in Roblox's website and games from 2019 to 2024. It was replaced by Builder, a custom font created by Roblox.",
+    "type": "misc"
+  },
+  {
     "name": "The Bird Says____.",
     "dateOpen": "2015-05-29",
     "dateClose": "2025-06-02",
